@@ -5,12 +5,11 @@ import { Cog, MessageCircleMore, MessageSquareText, Radar, Users } from "lucide-
 const SideBar01 = () => {
    const [active, setActive] = useState("messages");
 
-    
-
   return (
-    <div className="w-full h-screen flex bg-[#0b141a]">
+    <div className="w-[72px] h-screen bg-[#202c33] flex flex-col justify-between items-center py-4">
 
-      <div className="w-[72px] h-full bg-[#111b21] flex flex-col justify-between items-center py-4">
+
+      <div className="w-[72px] h-full bg-[#202c33] border-r border-[#2a3942] flex flex-col justify-between items-center py-4">
 
        
         <div className="flex flex-col items-center gap-4">
