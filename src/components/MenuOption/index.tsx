@@ -15,7 +15,6 @@ interface OptionsMenuProps {
 export default function MenuOptions({ isOpen, onClose }: OptionsMenuProps) {
   const menuRef = useRef<HTMLDivElement | null>(null);
 
-  // Fecha ao clicar fora
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
@@ -29,7 +28,7 @@ export default function MenuOptions({ isOpen, onClose }: OptionsMenuProps) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen, onClose]);
 
-  if (!isOpen) return null; // Não renderiza se estiver fechado
+  if (!isOpen) return null; 
 
   return (
     <div
@@ -41,7 +40,7 @@ export default function MenuOptions({ isOpen, onClose }: OptionsMenuProps) {
         z-50 overflow-hidden animate-fadeIn
       "
     >
-      {/* Item */}
+      
       <button
         onClick={onClose}
         className="flex items-center cursor-pointer gap-3 w-full text-left text-[#e9edef] px-4 py-3 hover:bg-[#2a3942]"
